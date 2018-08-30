@@ -26,6 +26,42 @@ label{
   transform: rotateY(180deg);
 }
 
+#start_btn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 36px;
+  letter-spacing: 0.08em;
+  font-weight: bold;
+  color: #fff;
+  visibility: hidden;
+}
+#start_btn.is-show{
+  visibility: visible;
+}
+
+.score{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.score_txt{
+  color: #fff;
+  background: rgba(0,0,0, 0.4);
+  display: inline-block;
+  padding: 10px;
+  min-width: 100px;
+  text-align: right;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.25;
+}
+
+
 .output{
   margin: 20px 0 0;
   height: 40px;
@@ -49,6 +85,13 @@ label{
 
 
 @media screen and (max-width: 640px){
+  .output{
+    position: fixed;
+    margin: 0;
+    bottom: 80px;
+    left: 0;
+    width: 100%;
+  }
   .controls{
     position: fixed;
     margin: 0;

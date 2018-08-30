@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Example 02 | Face Detection (clm_emotiondetection) with clmtrackr | Recognition</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+  <body>
+
+    <main>
+      <div class="content">
+        <canvas id="canvas"></canvas>
+
+        <!-- videoタグはautoplay属性を付与しないと表示されない -->
+        <video src="" id="video" playsinline controls="true" autoplay></video>
+
+        <div class="ui">
+          <button id="start_btn" class="is-show">START</button>
+
+          <div class="score">
+            <p class="score_txt"></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="output">
+        <div class="output_item" data-emotion="angry">
+          <img src="./assets/img/icon_angry.png" alt="">
+        </div>
+        <div class="output_item" data-emotion="sad">
+          <img src="./assets/img/icon_sad.png" alt="">
+        </div>
+        <div class="output_item" data-emotion="surprised">
+          <img src="./assets/img/icon_surprised.png" alt="">
+        </div>
+        <div class="output_item" data-emotion="happy">
+          <img src="./assets/img/icon_happy.png" alt="">
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="stop" class="btn">STOP</button>
+        <button id="front" class="btn">FRONT</button>
+        <button id="rear" class="btn">REAR</button>
+      </div>
+
+    </main>
+    
+    <script src="./assets/js/libs/stats.min.js"></script>
+    <script src="./assets/js/libs/clmtrackr.min.js"></script>
+    <script src="./assets/js/libs/emotion_classifier.js"></script>
+    <script src="./assets/js/libs/emotionmodel.js"></script>
+    <script src="./assets/models/model_pca_20_svm.js"></script>
+    <script src="./assets/js/demo_02.js"></script>
+  </body>
+</html>
